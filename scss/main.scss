@@ -138,3 +138,8 @@ body {
   background-color: transparent;
   color: #008081;
 }
+
+.form-group__btn:active {
+  position: relative;
+  top: 1px;
+}

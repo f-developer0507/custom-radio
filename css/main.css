@@ -119,4 +119,9 @@ body {
   border-color: #008081;
   background-color: transparent;
   color: #008081;
+}
+
+.form-group__btn:active {
+  position: relative;
+  top: 1px;
 }/*# sourceMappingURL=main.css.map */
