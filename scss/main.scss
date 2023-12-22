@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Poppins',sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.form-group__title {
+  margin-bottom: 30px;
+
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group label {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  text-transform: capitalize;
+}
+
+.form-group__text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-group label input {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  opacity: 0;
+}
+
+.form-group label input:checked + .custom-radio::before {
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.custom-radio {
+  position: relative;
+  
+  width: 30px;
+  height: 30px;
+  
+  display: inline-block;
+  
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+
+.custom-radio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  
+  width: 16px;
+  height: 16px;
+  
+  transition: transform .3s ease-in;
+}
+
+.football:before {  
+  background-image: url(./../icons/futbol.svg);
+}
+
+.xokkey:before {  
+  background-image: url(./../icons/hockey.svg);
+}
+
+.volebol:before {  
+  background-image: url(./../icons/volleyball.svg);
+}
+
+.tenis:before {  
+  width: 20px;
+  height: 16px;
+  
+  background-image: url(./../icons/tennis.svg);
+}
+
+.tenis {
+  opacity: 20%;
+}
+
+.tenis + .form-group__text {
+  opacity: 20%;
+}
+
+.form-group__btn {
+  padding: 15px 80px;
+
+  width: 200px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  
+  background-color: #008081;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  
+
+  transition: all .3s ease-in;
+}
+
+.form-group__btn:hover {
+  border-color: #008081;
+  background-color: transparent;
+  color: #008081;
+}
